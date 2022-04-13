@@ -46,7 +46,7 @@
             
             <div class="col-md-8 content-section" id="flow-section">
               <div class="content-box">
-                <div class="menu-tab">
+                <div class="menu-tab" id="flow-tab">
                   <a href="#" class="tab-name active"><img src="./assets/icon/uncal-icon.svg" id="tab-icon" alt="Uncal Icon"> <span> Project A</span> <button class="close-tab">
                     <img src="./assets/icon/close-icon.svg" alt="">
                   </button></a>
@@ -66,15 +66,15 @@
 
             <div class="col-md-4 content-section" id="palette-section">
               <div class="content-box">
-                <div class="menu-tab">
-                  <a href="" class="tab-name active">
+                <div class="menu-tab" id="palette-tab">
+                  <a href="#" class="tab-name active">
                     <img src="./assets/icon/palette-icon.svg" id="tab-icon" alt="Palette Icon">
                     <span>Palette</span>
                     <button class="close-tab">
                       <img src="./assets/icon/close-icon.svg" alt="Close Icon">
                     </button>
                   </a>
-                  <a href="" class="tab-name">
+                  <a href="#" class="tab-name">
                     <img src="./assets/icon/api-sync-icon.svg" id="tab-icon" alt="API Sync Icon">
                     <span>API Sync</span>
                     <button class="close-tab">
@@ -90,10 +90,21 @@
                         <img src="./assets/icon/search-icon.svg" id="search-icon" alt="Search Icon">
                       </label>
                     </div>
-                    <button class="setting-button">
+                    <div class="dropdown">
+                      <button class="setting-button" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="./assets/icon/setting-icon.svg" alt="Settings Icon">
+                        <img src="./assets/icon/dropdown-icon.svg" alt="Dropdown Icon">
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
+                    </div>
+                    <!-- <button class="setting-button">
                       <img src="./assets/icon/setting-icon.svg" alt="Settings Icon">
                       <img src="./assets/icon/dropdown-icon.svg" alt="Dropdown Icon">
-                    </button>
+                    </button> -->
                   </div>
 
                   <div class="search-by-category">
@@ -187,7 +198,7 @@
 
             <div class="col-md-8 content-section" id="properties-section">
               <div class="content-box">
-                <div class="menu-tab">
+                <div class="menu-tab" id="properties-tab">
                     <a href="#" class="tab-name active">
                       <img src="./assets/icon/properties-icon.svg" alt="Properties Icon">
                       <span>
@@ -220,7 +231,7 @@
                     </a>
                 </div>
                 <div class="content-body">
-                    <div class="menu-group">
+                    <div class="menu-group" id="main-menu">
                       <a href="#" class="menu-name active">General</a>
                       <a href="#" class="menu-name">Notes</a>
                     </div>
@@ -261,7 +272,7 @@
                       </div>
 
                       <div class="col-md-4 input-output-box">
-                        <div class="menu-group">
+                        <div class="menu-group" id="sub-main-menu">
                           <a href="#" class="menu-name active">Input</a>
                           <a href="#" class="menu-name">Output</a>
                         </div>
@@ -272,7 +283,7 @@
                             <img src="./assets/icon/search-icon.svg" alt="Search Icon">
                           </label>
                         </div>
-                        <ul class="list-group">
+                        <ul class="list-group" id="properties-group">
                           <li class="list-item">
                             <span> Payload </span>
                             <p class="list-sub-item">Unknown : <span class="unhighlighted-text">Unknown</span></p>
@@ -302,7 +313,7 @@
 
             <div class="col-md-4 content-section" id="flow-map-section">
               <div class="content-box">
-                <div class="menu-tab">
+                <div class="menu-tab" id="flow-map-tab">
                   <a href="#" class="tab-name">
                     <img src="./assets/icon/connection-explorer-icon.svg" alt="Connection Explorer Icon">
                     <span>
@@ -332,7 +343,7 @@
                       <img src="./assets/icon/search-icon.svg" alt="Search Icon">
                     </label>
                   </div>
-                  <ul class="list-group">
+                  <ul class="list-group" id="flow-map-group">
                     <li class="list-item">
                       <span class="main-item">
                         <img src="./assets/icon/uncal-icon.svg" alt="Uncal Icon">

@@ -79,12 +79,7 @@ a,a:hover, a:visited{
     height: 70%;
 }
 
-.content .container-fluid .row #properties-section{
-    margin-top: -25px;
-    height: inherit;
-}
-
-.content .container-fluid .row #flow-map-section{
+.content .container-fluid .row #properties-section, .content .container-fluid .row #flow-map-section{
     margin-top: 10px;
 }
 
@@ -93,7 +88,7 @@ a,a:hover, a:visited{
 }
 
 .content .container-fluid .row #flow-section .content-box .content-body{
-    height: 370px;
+    max-height: 65vh;
     overflow-y: scroll;
 }
 
@@ -145,7 +140,7 @@ a,a:hover, a:visited{
 }
 
 .content .container-fluid .row .content-section .content-box .menu-tab .tab-name:not(:first-child){
-    margin-left: 10px;
+    margin-left: 5px;
 }
 
 .content .container-fluid .row .content-section .content-box .menu-tab .tab-name{
@@ -155,10 +150,15 @@ a,a:hover, a:visited{
     color: var(--clr-black);
     font-size: var(--fs-sub-heading);
     border-radius: 5px;
+    transition: all .15s linear;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+    -webkit-transition: all .15s linear;
+    -moz-transition: all .15s linear;
+    -ms-transition: all .15s linear;
+    -o-transition: all .15s linear;
 }
 
 .content .container-fluid .row .content-section .content-box .menu-tab .tab-name.active{
@@ -190,16 +190,16 @@ a,a:hover, a:visited{
 }
 
 .content .container-fluid .row .content-section .content-box .menu-tab .tab-name .close-tab{
-    display: none;
+    opacity: 0;
     margin-left: 5px;
     background-color: transparent;
     border: none;
     cursor: default;
-    transition: all .3s linear;
-    -webkit-transition: all .3s linear;
-    -moz-transition: all .3s linear;
-    -ms-transition: all .3s linear;
-    -o-transition: all .3s linear;
+    transition: all .15s linear;
+    -webkit-transition: all .15s linear;
+    -moz-transition: all .15s linear;
+    -ms-transition: all .15s linear;
+    -o-transition: all .15s linear;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -212,7 +212,8 @@ a,a:hover, a:visited{
 }
 
 .content .container-fluid .row .content-section .content-box .menu-tab .tab-name.active .close-tab{
-    display: block;
+    /* display: block; */
+    opacity: 1;
 }
 
 .content .container-fluid .row .content-section .content-box .menu-tab .tab-name .close-tab img{
@@ -290,16 +291,21 @@ a,a:hover, a:visited{
 
 .content .container-fluid .row .content-section .content-box .content-body .search-by-category .category-button{
     display: inline-flex;
-    padding: 2px 8px 2px 5px;  
+    padding: 2px 8px 2px 5px;
     align-items: center;
     background: transparent;
     margin-bottom: 5px;
     border: none;
     border-radius: 5px;
+    transition: all .15s linear ;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+    -webkit-transition: all .15s linear ;
+    -moz-transition: all .15s linear ;
+    -ms-transition: all .15s linear ;
+    -o-transition: all .15s linear ;
 }
 
 .content .container-fluid .row .content-section .content-box .content-body .search-by-category .category-button.active{
@@ -455,6 +461,7 @@ a,a:hover, a:visited{
     height: 30px;
     padding: 0 10px;
     border: none;
+    width: 100%;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -509,21 +516,79 @@ a,a:hover, a:visited{
 
 .content .container-fluid .row .content-section .content-box .content-body .list-group .list-item{
     position: relative;
+    margin-bottom: 5px;
+    height: var(--fs-heading);
+    cursor: default;
+    margin-bottom: 5px;
+    pointer-events: none;
+    transition: all .15s linear;
+    -webkit-transition: all .15s linear;
+    -moz-transition: all .15s linear;
+    -ms-transition: all .15s linear;
+    -o-transition: all .15s linear;
 }
+
+.content .container-fluid .row .content-section .content-box .content-body .list-group .list-item.has-child{
+    cursor: pointer;
+    pointer-events: fill;
+}
+
+.content .container-fluid .row .content-section .content-box .content-body .list-group .list-item.active{
+    height: calc(var(--fs-heading) * 2);
+}
+
+.content .container-fluid .row #flow-map-section .content-box .content-body .list-group .list-item.active{
+    height: calc(var(--fs-heading) * 4
+    );
+}
+
+.content .container-fluid .row .content-section .content-box .content-body .list-group .list-item.active.has-child{
+    margin-bottom: 10px;
+}
+
 
 .content .container-fluid .row #flow-map-section .content-box .content-body .list-group .list-item{
     margin-bottom: 10px;
 }
 
 .content .container-fluid .row .content-section .content-box .content-body .list-group .list-item::before{
-    content: url('../../icon/chevron-icon.svg');    
+    content: url('../../icon/chevron-icon.svg');
     position: absolute;
+    opacity: 0;
+    left: 0;
+    transform: rotate(-90deg);
+    transition: all .15s linear ;
+    -webkit-transition: all .15s linear ;
+    -moz-transition: all .15s linear ;
+    -ms-transition: all .15s linear ;
+    -o-transition: all .15s linear ;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+}
+
+.content .container-fluid .row .content-section .content-box .content-body .list-group .list-item.has-child::before{
+    opacity: 1;
     left: -20px;
 }
 
 .content .container-fluid .row .content-section .content-box .content-body .list-group .list-item .list-sub-item{
     margin-left: 15px;
+    margin-top: 3.5px;
     margin-bottom: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .15s linear;
+    -webkit-transition: all .15s linear;
+    -moz-transition: all .15s linear;
+    -ms-transition: all .15s linear;
+    -o-transition: all .15s linear;
+}
+
+.content .container-fluid .row .content-section .content-box .content-body .list-group .list-item.active .list-sub-item{
+    opacity: 1;
+    visibility: visible;
 }
 
 .content .container-fluid .row .content-section .content-box .content-body .list-group .list-item .list-sub-item .unhighlighted-text{
@@ -533,7 +598,6 @@ a,a:hover, a:visited{
 .content .container-fluid .row #flow-map-section .content-box .content-body .list-group .list-item .main-item{
     display: inline-flex;
     align-items: center;
-    /* margin-bottom: 5px; */
 }
 
 .content .container-fluid .row #flow-map-section .content-box .content-body .list-group .list-item .main-item img{
